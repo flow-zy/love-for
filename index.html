@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>给最爱的❤️</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+		/>
+		<!-- 重制样式 -->
+		<link rel="stylesheet" href="https://unpkg.com/reset.css@2.0.2/reset.css" />
+		<link rel="stylesheet" href="./css/index.css" />
+		<style>
+			/** 重制浏览器的滚动条**/
+			body::-webkit-scrollbar {
+				width: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<div class="love-box box" style="display: none">
+				<!-- 内容区域 -->
+				<div class="content"></div>
+				<!-- 操作区域 -->
+				<div class="action-love" style="display: none">
+					<button class="prev">上一页</button>
+					<button class="next">下一页</button>
+				</div>
+			</div>
+			<div class="size-box box" style="display: none">
+				<div class="content content-size">
+					<div id="timer">倒计时: 30秒</div>
+					<div class="rules">
+						请在30秒内猜一个0到100之间的数字, 猜中后可以查看情书
+					</div>
+					<input
+						type="number"
+						id="userInput"
+						placeholder="输入你的猜测"
+						min="0"
+						max="100"
+					/>
+					<div class="tip"></div>
+					<!-- 情话 -->
+					<div class="love-words"></div>
+				</div>
+				<div class="action-size" style="display: none">
+					<button class="hint-btn">提示</button>
+					<button class="retry-btn">再来一次</button>
+					<button class="guess-btn">提交猜测</button>
+				</div>
+			</div>
+			<!-- 扫雷 -->
+			<div class="saolei-box box" style="display: none">
+				<div class="minesweeper-game content content-saolei"></div>
+				<div class="action-saolei">
+					<button class="reset-btn">重新开始</button>
+				</div>
+			</div>
+			<!-- 2048 -->
+			<div class="box number-box" style="display: none">
+				<div class="content content-number"></div>
+				<div class="action-number">
+					<div class="score"></div>
+					<button class="reset-btn">重新开始</button>
+				</div>
+			</div>
+			<div class="btn-groups">
+				<button class="btn btn-love"><i class="fa fa-heart"></i> 情书</button
+				><button class="btn btn-game btn-size">猜大小</button>
+				<button class="btn btn-game btn-saolei">扫雷</button>
+				<button class="btn btn-game btn-mm">秘密</button>
+				<button class="btn btn-game btn-number">2048</button>
+			</div>
+		</div>
+	</body>
+	<script src="./js/ceateHeart.js"></script>
+	<script src="./js/index.js" type="module"></script>
+</html>
